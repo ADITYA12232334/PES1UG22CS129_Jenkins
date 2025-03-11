@@ -13,10 +13,11 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh './output'
+                        sh './nonexistent_executable' // Intentional error
                 }
             }
         }
+
 
         stage('Deploy') {
             steps {
